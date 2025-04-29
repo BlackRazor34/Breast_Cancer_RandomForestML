@@ -19,7 +19,7 @@ This project implements a Random Forest classification model to analyze breast c
 ```bash
 # Clone this repository
 git clone https://github.com/BlackRazor34/Breast_Cancer_RandomForestML.git
-cd breast-cancer-classification
+cd Breast_Cancer_RandomForestML
 
 # Install required packages
 pip install -r requirements.txt
@@ -111,19 +111,6 @@ The top 5 most important features for classification:
 - False Positives (Benign incorrectly classified as Malignant): 1
 - True Negatives (Benign correctly identified): 70
 
-## 📋 Model Workflow
-
-```mermaid
-graph TD
-    A[Data Loading] --> B[Exploratory Data Analysis]
-    B --> C[Data Preprocessing]
-    C --> D[Feature Selection & Engineering]
-    D --> E[Model Training]
-    E --> F[Model Evaluation]
-    F --> G[Hyperparameter Tuning]
-    G --> H[Final Evaluation]
-    H --> I[Feature Importance Analysis]
-```
 
 ## 📁 Project Structure
 
