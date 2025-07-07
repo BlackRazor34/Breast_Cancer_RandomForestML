@@ -1,77 +1,62 @@
-# Breast Cancer Classification with Random Forest
+# 🎗️ Meme Kanseri Tahmin Uygulaması (Streamlit)
 
-<p align="center"><img src="random.png" width="600" /></p>
+Makine öğrenmesi ile geliştirilmiş, bir tümörün özelliklerine dayanarak **iyi huylu (Benign)** veya **kötü huylu (Malignant)** olduğunu tahmin eden interaktif bir web uygulaması.
 
-## 📋 Overview
+<p align="center">
+  <img src="images/breastcancer.jpg" width="700" />
+</p>
 
-This project implements a Random Forest classification model to analyze breast cancer data, predicting whether tumors are benign or malignant. Developed in Google Colab, the project includes comprehensive data preprocessing, model training, and performance evaluation steps.
+## 📋 Genel Bakış
 
-## 🧬 Dataset
+[cite_start]Bu proje, Wisconsin Meme Kanseri veri setiyle eğitilmiş, yüksek performanslı bir Random Forest modelini kullanır. [cite: 1] Geliştirilen interaktif Streamlit arayüzü sayesinde, araştırmacılar ve öğrenciler, 5 temel tümör özelliğini girerek anında tahmin ve güven skoru alabilirler.
 
-* **Source**: UCI Breast Cancer Wisconsin Dataset
-* **Features**: 30 features (tumor size, shape, texture, etc.)
-* **Target**: Binary classification (benign or malignant)
-* **Data Loading**: Dataset is loaded using `sklearn.datasets.load_breast_cancer` function
-* **Size**: 569 samples with 30 features each
+## 🛠️ Teknolojiler
 
-## 🔧 Installation & Setup
+| Teknoloji      | Amaç                  |
+|----------------|-----------------------|
+| Streamlit 🎈   | İnteraktif Web Arayüzü |
+| Scikit-learn 🧠| Makine Öğrenmesi Modeli|
+| Pandas 🐼     | Veri Yönetimi         |
+| Python 🐍     | Backend               |
 
-```bash
-# Clone this repository
-git clone https://github.com/BlackRazor34/Breast_Cancer_RandomForestML.git
-cd Breast_Cancer_RandomForestML
+## ✨ Uygulama Özellikleri
 
-# Install required packages
-pip install -r requirements.txt
-```
+- **📊 İnteraktif Arayüz:** Kenar çubuğundan değerleri girerek anında tahmin alın.
+- **📖 Dahili Kılavuz:** Kullanılan özelliklerin ve modelin metodolojisinin açıklandığı bir sekme.
+- [cite_start]**📈 Yüksek Doğruluk:** %95 civarında test doğruluğuna sahip, 5 özellikli optimize edilmiş Random Forest modeli. [cite: 1]
+- **⚠️ Yasal Uyarı:** Uygulamanın tıbbi teşhis amaçlı olmadığını belirten net bir uyarı.
 
-### Requirements
+## 🚀 Uygulamayı Yerel Ortamda Çalıştırma
 
-```
-scikit-learn
-pandas
-numpy
-matplotlib
-seaborn
-```
+1.  **Depoyu Klonlayın:**
+    ```bash
+    git clone [https://github.com/BlackRazor34/Breast_Cancer_RandomForestML.git](https://github.com/BlackRazor34/Breast_Cancer_RandomForestML.git)
+    cd Breast_Cancer_RandomForestML
+    ```
 
-## 🚀 Usage
+2.  **Gerekli Kütüphaneleri Yükleyin:**
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-1. Upload the `Breast_Cancer_Makine_Öğrenmesi_Projesi.ipynb` file to Google Colab
-2. Run the cells sequentially to perform:
-   - Data loading and exploration
-   - Feature preprocessing and selection
-   - Model training with Random Forest
-   - Performance evaluation and visualization
+3.  **Streamlit Uygulamasını Başlatın:**
+    ```bash
+    streamlit run streamlit_app.py
+    ```
+    Uygulama tarayıcınızda `http://localhost:8501` adresinde otomatik olarak açılacaktır.
 
-### Quick Start Code
+---
 
-```python
-# Load dataset
-from sklearn.datasets import load_breast_cancer
-data = load_breast_cancer()
-X, y = data.data, data.target
+## 📊 Model Performansı ve Detaylar
 
-# Split data
-from sklearn.model_selection import train_test_split
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+[cite_start]Modelimiz, UCI Breast Cancer Wisconsin veri seti kullanılarak eğitilmiş ve test setinde mükemmel bir performans göstermiştir. [cite: 1]
 
-# Train model
-from sklearn.ensemble import RandomForestClassifier
-model = RandomForestClassifier(n_estimators=100, random_state=42)
-model.fit(X_train, y_train)
+<p align="center"><img src="images/random.png" width="600" /></p>
 
-# Evaluate
-from sklearn.metrics import classification_report, confusion_matrix
-predictions = model.predict(X_test)
-print(classification_report(y_test, predictions))
-```
 
-## 📊 Results
+### Sonuçlar
 
-Our Random Forest model achieved excellent performance on the test set:
-
-| Metric | Score |
+| Metrik | Skor |
 |--------|-------|
 | **Accuracy** | 96.49% |
 | **Precision (Weighted Avg)** | 95.89% |
@@ -79,87 +64,35 @@ Our Random Forest model achieved excellent performance on the test set:
 | **F1-Score (Weighted Avg)** | 96.05% |
 | **AUC-ROC** | 0.981 |
 
-### Detailed Classification Report
+[cite_start]*(Bu metrikler, orijinal modelin 30 özelliğin tamamı kullanılarak eğitilmiş haline aittir.)* [cite: 1]
 
-| Class | Precision | Recall | F1-Score | Support |
-|-------|-----------|--------|----------|---------|
-| Malignant | 0.98 | 0.93 | 0.95 | 43 |
-| Benign | 0.96 | 0.99 | 0.97 | 71 |
-| **Accuracy** | | | 0.96 | 114 |
-| **Macro Avg** | 0.97 | 0.96 | 0.96 | 114 |
-| **Weighted Avg** | 0.97 | 0.96 | 0.96 | 114 |
+### Özellik Önem Düzeyleri
+[cite_start]Modelin tahmin yaparken en çok dikkate aldığı 5 özellik aşağıda gösterilmiştir. [cite: 1] İnteraktif uygulama, bu en önemli özellikler kullanılarak eğitilmiş bir alt model kullanmaktadır.
 
-## 📈 Visualizations
+<p align="center"><img src="images/Özellik_Önem.png" width="600" /></p>
 
-### Feature Importance
+1.  [cite_start]Worst perimeter (0.211) [cite: 1]
+2.  [cite_start]Mean concavity (0.189) [cite: 1]
+3.  [cite_start]Worst radius (0.162) [cite: 1]
+4.  [cite_start]Mean radius (0.143) [cite: 1]
+5.  [cite_start]Worst area (0.128) [cite: 1]
 
-<p align="center"><img src="Özellik_Önem.png" width="600" /></p>
+### Hata Matrisi (Confusion Matrix)
+<p align="center"><img src="images/confmatrix.png" width="300" /></p>
 
-The top 5 most important features for classification:
-1. Worst perimeter (0.211)
-2. Mean concavity (0.189)
-3. Worst radius (0.162)
-4. Mean radius (0.143)
-5. Worst area (0.128)
+- [cite_start]**Doğru Pozitif (TP):** 40 (Kötü huylu olarak doğru tahmin edilen) [cite: 1]
+- [cite_start]**Yanlış Negatif (FN):** 3 (Kötü huylu iken iyi huylu olarak tahmin edilen) [cite: 1]
+- [cite_start]**Yanlış Pozitif (FP):** 1 (İyi huylu iken kötü huylu olarak tahmin edilen) [cite: 1]
+- [cite_start]**Doğru Negatif (TN):** 70 (İyi huylu olarak doğru tahmin edilen) [cite: 1]
 
-### Confusion Matrix
+---
 
-<p align="center"><img src="confmatrix.png" width="300" /></p>
+## 🔮 Gelecek Çalışmalar
 
-- True Positives (Malignant correctly identified): 40
-- False Negatives (Malignant incorrectly classified as Benign): 3
-- False Positives (Benign incorrectly classified as Malignant): 1
-- True Negatives (Benign correctly identified): 70
+- [cite_start]Farklı algoritmalarla (SVM, XGBoost, Sinir Ağları) denemeler yapmak. [cite: 1]
+- [cite_start]Gelişmiş özellik mühendisliği teknikleri uygulamak. [cite: 1]
+- [cite_start]Modelin yeniden eğitimi için otomatik bir pipeline oluşturmak. [cite: 1]
 
+## 📜 Lisans
 
-## 📁 Project Structure
-
-```
-breast-cancer-classification/
-├── README.md
-├── Breast_Cancer_Makine_Öğrenmesi_Projesi.ipynb
-├── images/
-│   ├── confmatrix.png
-│   ├── Özellik_Önem.png
-│   ├── random.png
-│  
-├── requirements.txt
-├── .gitignore
-└── LICENSE
-```
-
-## 🔍 Key Insights
-
-- Feature importance analysis revealed that geometric measures of the tumor (perimeter, radius, area) are the most predictive features for classification.
-- The model shows slightly better performance on benign cases (recall 0.99) compared to malignant cases (recall 0.93).
-- Cross-validation confirmed the model's robustness across different data splits.
-- The high accuracy (96.49%) demonstrates the effectiveness of Random Forest for this diagnostic task.
-
-## 🔮 Future Work
-
-- Experiment with different algorithms (SVM, XGBoost, Neural Networks)
-- Implement advanced feature engineering techniques
-- Develop a web application for real-time predictions
-- Incorporate additional medical datasets for broader diagnosis support
-- Add ROC curve visualization for more comprehensive model evaluation
-- Implement a pipeline for automated model retraining
-
-## 👥 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- UCI Machine Learning Repository for providing the dataset
-- The scikit-learn team for their excellent implementation of machine learning algorithms
-- All contributors and researchers in the field of medical diagnostics
+Bu proje MIT Lisansı ile lisanslanmıştır.
