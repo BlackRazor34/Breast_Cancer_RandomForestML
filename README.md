@@ -63,18 +63,11 @@ Modelin performansını artırmak, karmaşıklığını azaltmak ve daha hızlı
 
 *(Metrikler, modelin 30 özelliğin tamamı kullanılarak eğitilmiş orijinal haline aittir.)*
 
-<table align="center">
-  <tr>
-    <td align="center">
-      <strong>Özellik Önem Düzeyleri</strong><br>
-      <img src="images/Özellik_Önem.png" alt="Özellik Önem Düzeyleri Grafiği" width="450">
-    </td>
-    <td align="center">
-      <strong>Hata Matrisi (Confusion Matrix)</strong><br>
-      <img src="images/confmatrix.png" alt="Hata Matrisi Grafiği" width="225">
-    </td>
-  </tr>
-</table>
+<p align="center">
+<img src="images/Özellik_Önem.png" width="450">
+<img src="images/confmatrix.png" width="225">
+</p>
+ 
 ---
 
 ## 🚀 Uygulamayı Yerel Ortamda Çalıştırma
