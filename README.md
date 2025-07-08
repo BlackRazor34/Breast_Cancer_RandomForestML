@@ -1,6 +1,6 @@
 # 🎗️ Meme Kanseri Tahmin Uygulaması (Streamlit & Random Forest)
 
-Bu proje, bir tümörün histolojik özelliklerine dayanarak **iyi huylu (Benign)** veya **kötü huylu (Malignant)** olduğunu sınıflandıran, makine öğrenmesi destekli interaktif bir web uygulamasıdır. Bu projede, model geliştirme süreçlerinden canlı bir web uygulamasına geçişin tam bir örneğini sunmaktadır..
+Bu proje, bir tümörün histolojik özelliklerine dayanarak **iyi huylu (Benign)** veya **kötü huylu (Malignant)** olduğunu sınıflandıran, makine öğrenmesi destekli interaktif bir web uygulamasıdır. Bu projemde, model geliştirme süreçlerinden canlı bir web uygulamasına geçişin bir örneğini sundum..
 
 <p align="center">
   <img src="images/breastcancer.jpg" width="700" />
@@ -64,8 +64,8 @@ Modelin performansını artırmak, karmaşıklığını azaltmak ve daha hızlı
 *(Metrikler, modelin 30 özelliğin tamamı kullanılarak eğitilmiş orijinal haline aittir.)*
 
 <p align="center">
-<img src="images/Özellik_Önem.png" width="48%">
-<img src="images/confmatrix.png" width="24%">
+<img src="images/Özellik_Önem.png" width="100%">
+<img src="images/confmatrix.png" width="50%">
 </p>
 
 ---
