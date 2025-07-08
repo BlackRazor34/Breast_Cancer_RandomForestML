@@ -10,6 +10,8 @@ Bu proje, bir tümörün histolojik özelliklerine dayanarak **iyi huylu (Benign
 
 Uygulama temel olarak Wisconsin Meme Kanseri veri seti üzerinde eğitilmiş bir **Random Forest** sınıflandırma modelini kullanır. Geliştirdiğim interaktif Streamlit arayüzü, 5 temel tümör özelliğini girdi olarak alarak anında olasılıksal bir tahmin sunar. Bu proje ham veriden son kullanıcıya ulaşan bir makine öğrenmesi ürününün tüm yaşam döngüsünü kapsamaktadır.
 
+**➡️ [Uygulamayı Canlı Deneyin!](https://breastcancerrandomforestml.streamlit.app/)**
+
 ## 🛠️ Teknolojiler
 
 | Teknoloji      | Amaç                  |
