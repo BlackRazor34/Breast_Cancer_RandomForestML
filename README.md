@@ -1,6 +1,6 @@
 # 🎗️ Meme Kanseri Tahmin Uygulaması (Streamlit & Random Forest)
 
-Bu proje, bir tümörün histolojik özelliklerine dayanarak **iyi huylu (Benign)** veya **kötü huylu (Malignant)** olduğunu sınıflandıran, makine öğrenmesi destekli interaktif bir web uygulamasıdır. Proje, model geliştirme süreçlerinden canlı bir web uygulamasına geçişin tam bir örneğini sunmaktadır.
+Bu proje, bir tümörün histolojik özelliklerine dayanarak **iyi huylu (Benign)** veya **kötü huylu (Malignant)** olduğunu sınıflandıran, makine öğrenmesi destekli interaktif bir web uygulamasıdır. Bu projede, model geliştirme süreçlerinden canlı bir web uygulamasına geçişin tam bir örneğini sunmaktadır..
 
 <p align="center">
   <img src="images/breastcancer.jpg" width="700" />
@@ -8,7 +8,7 @@ Bu proje, bir tümörün histolojik özelliklerine dayanarak **iyi huylu (Benign
 
 ## 📋 Genel Bakış
 
-Uygulama, temel olarak Wisconsin Meme Kanseri veri seti üzerinde eğitilmiş bir **Random Forest** sınıflandırma modelini kullanır. Geliştirilen interaktif Streamlit arayüzü, 5 temel tümör özelliğini girdi olarak alarak anında olasılıksal bir tahmin sunar. Bu proje, ham veriden son kullanıcıya ulaşan bir makine öğrenmesi ürününün tüm yaşam döngüsünü kapsamaktadır.
+Uygulama temel olarak Wisconsin Meme Kanseri veri seti üzerinde eğitilmiş bir **Random Forest** sınıflandırma modelini kullanır. Geliştirdiğim interaktif Streamlit arayüzü, 5 temel tümör özelliğini girdi olarak alarak anında olasılıksal bir tahmin sunar. Bu proje ham veriden son kullanıcıya ulaşan bir makine öğrenmesi ürününün tüm yaşam döngüsünü kapsamaktadır.
 
 ## 🛠️ Teknolojiler
 
@@ -64,8 +64,8 @@ Modelin performansını artırmak, karmaşıklığını azaltmak ve daha hızlı
 *(Metrikler, modelin 30 özelliğin tamamı kullanılarak eğitilmiş orijinal haline aittir.)*
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/BlackRazor34/Breast_Cancer_RandomForestML/main/Özellik_Önem.png" width="48%">
-<img src="https://raw.githubusercontent.com/BlackRazor34/Breast_Cancer_RandomForestML/main/confmatrix.png" width="24%">
+<img src="images/Özellik_Önem.png" width="48%">
+<img src="images/confmatrix.png" width="24%">
 </p>
 
 ---
