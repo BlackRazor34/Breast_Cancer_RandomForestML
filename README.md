@@ -64,8 +64,9 @@ Modelin performansını artırmak, karmaşıklığını azaltmak ve daha hızlı
 *(Metrikler, modelin 30 özelliğin tamamı kullanılarak eğitilmiş orijinal haline aittir.)*
 
 <p align="center">
-<img src="images/Özellik_Önem.png" width="450">
-<img src="images/confmatrix.png" width="225">
+<img src="images/Özellik_Önem.png" width="100%">
+---
+<img src="images/confmatrix.png" width="50%">
 </p>
  
 ---
